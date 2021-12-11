@@ -15,11 +15,9 @@ async function getByID() {
   console.log(arr)
   arr.forEach((movie) =>{
     message.innerHTML += `
-  <li>                    
-      <div class="column">
-              <th>${(movie)}</th>
+      <div class="box has-text-centered">
+              <h2>${(movie)}</h2>
       </div>
-  </li>
   `
   } )
   function clearList(){
