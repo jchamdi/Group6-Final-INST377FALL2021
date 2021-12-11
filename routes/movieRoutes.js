@@ -311,3 +311,4 @@ router.route('/director')
     }
   });
 
+  export default router;
