@@ -6,14 +6,15 @@ async function getByID() {
   console.log(endpoint)
   const request = await fetch(endpoint)
   const movies = await request.json()
-  const arr = new Set();
+  const movieSet = new Set();
+  
   movies.forEach((movie) => {
-                movie.forEach((data) => {
-                        arr.add(data.name)
-                      });
-                    });
-  console.log(arr)
-  arr.forEach((movie) =>{
+      movie.forEach((data) => {
+        movieSet.add(data.name);
+      });
+  });
+
+  movieSet.forEach((movie) =>{
     message.innerHTML += `
   <li>                    
       <div class="column">
@@ -22,15 +23,16 @@ async function getByID() {
   </li>
   `
   } )
-  function clearList(){
+  
+ function clearSet(){
     // looping through each child of the search results list and remove each child
-    while (arr.firstChild){
-        arr.removeChild(arr.firstChild)
+    while (movieSet.firstChild){
+      movieSet.removeChild(movieSet.firstChild)
     }
   }
   
   clearButton.addEventListener("click", () => {
-    clearList()
+    clearSet()
   })
 }
 
