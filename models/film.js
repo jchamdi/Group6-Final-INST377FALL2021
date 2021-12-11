@@ -1,13 +1,13 @@
 export default (sequelize, DataTypes) => {
-  const Films = sequelize.define(
-      'Films',
-      {
-        film_id: {
-          type: DataTypes.INTEGER,
-          allowNull: false,
-          primaryKey: true,
-          unique: true,
-          autoIncrement:true
+    const Films = sequelize.define(
+        'Films',
+        {
+          film_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            unique: true,
+            autoIncrement:true
         },
         name: {
           type: DataTypes.STRING

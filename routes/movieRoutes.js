@@ -310,5 +310,4 @@ router.route('/director')
       res.json({message: 'Something went wrong'});
     }
   });
-
-  export default router;
+export default router;
